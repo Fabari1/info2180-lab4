@@ -1,12 +1,13 @@
-document.getElementById('searchButton').addEventListener('click', function() {
-    const httpRequest = new XMLHttpRequest();
-    // URL must be a string; include the PHP filename in quotes (adjust path if the file is in a different folder)
-    httpRequest.open('GET', 'superheroes.php', true);
-    console.log('Button clicked, sending request...');
-    httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
-            alert(httpRequest.responseText);   
-        }
-    };
-    httpRequest.send();
+window.onload = function() {
+    console.log("Page loaded");
+    const searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent form submission
+    fetch('http://localhost/info2180-lab4/superheroes.php')
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    });
 });
+};
