@@ -1,3 +1,3 @@
-# INFO2180 Lab 4 This is 
+# INFO2180 Lab 4
 
 Lab 4 for Fabari Williams
