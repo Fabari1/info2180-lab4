@@ -1,5 +1,7 @@
 body {
-    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+    font-family:'Arial Narrow', Arial, sans-serif;
+
+    font-weight: bold;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,9 +11,10 @@ body {
 }
 
 .header {
-    background-color: #4474c1;
+    background-color: oklab(58.617% -0.03559 -0.1337);
     color: white;
     padding: 0.2rem 0;
+
 }
 
 .header-content {
@@ -51,6 +54,11 @@ label {
 .search-box input[type="text"] {
     padding: 8px;
     width: 60%;
+    border-radius: 10px;
+}
+
+.body div{
+    margin: 0px 100px;
 }
 
 button {

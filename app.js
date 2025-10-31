@@ -17,12 +17,8 @@ searchButton.addEventListener('click', function(event) {
         return response.text();
     })
     .then(data => {
-        result.innerHTML = `<h2>RESULT</h2><hr>`;
-        if (data.length === 0) {
-            result.innerHTML += `<p>No superheroes found matching "${query}".</p>`;
-        } else {
-            result.innerHTML += `${data}`;
-        }
+        result.innerHTML = `<h2>RESULT</h2><hr>${data}`;
+        
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
